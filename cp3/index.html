@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+  This is the index.html page for BlazBattle. BlazBattle is a game where users can make their own
+  fighter, change the settings, scene, enemy and location of the fight, then watch their fighters
+  battle. The page uses sections to break down the site, ranging from making a fighter, the
+  settings for the fight, and the fight stage.
+-->
+
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Spice&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlazBattle - CP3</title>
+</head>
+<body>
+  <header>
+    <h1>
+      🔥🔥 Welcome to BlazBattle 🔥🔥
+    </h1>
+  </header>
+  <main>
+    <article>
+      <h2>How to play:</h2>
+      <ol>
+        <li>Choose options to make your fighter!</li>
+        <li>When you've selected the options, click make fighter!</li>
+        <li>Click fight to see your fighter blaze 🔥 the competition!</li>
+      </ol>
+    </article>
+    <section>
+      <h2>Make your fighter</h2>
+      <section id="makefighter" class="settings">
+        <section>
+          <p>Fighter: </p>
+          <select name="fighter" id="fighter-select">
+            <option value="lizard">Lizard</option>
+            <option value="dragonite">Dragonite</option>
+            <option value="ryu">Ryu (Street Fighter)</option>
+          </select>
+        </section>
+        <section>
+          <p>Color: </p>
+          <select name="color" id="color-select">
+            <option value="">Normal</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+          </select>
+        </section>
+        <section>
+          <p>Size: </p>
+          <select name="size" id="size-select">
+            <option value="">Normal</option>
+            <option value="small">Small</option>
+            <option value="big">Big</option>
+          </select>
+        </section>
+      </section>
+      <button type="button" id="makefighterbtn">Make Fighter</button>
+      <p>A <strong>fighter</strong> is made...</p>
+      <img id="fighter" src="imgs/guyonfire.gif" alt="Guy on fire from Metal Slug">
+    </section>
+    <section>
+      <h2>Setup the Fight</h2>
+      <section id="setupfight" class="settings">
+        <section>
+          <p>Hometown Zip Code: </p>
+          <input type="text" id="zip-select-country" name="stage" required minlength="2" size="2">
+          <input type="text" id="zip-select" name="stage" required minlength="2" size="10">
+          <p>Enter in your country code and zip code.</p>
+          <p class="error hidden">Error! Input may not be a real place!</p>
+        </section>
+        <section>
+          <p>Enemy: </p>
+          <input type="text" id="enemy-select" name="enemy" required minlength="2" size="10">
+          <p>Enter any character who has an Amiibo.</p>
+          <p class="error hidden">Error! Input may not have an amiibo!</p>
+        </section>
+        <section>
+          <p>Scenario: </p>
+          <select name="size" id="scene-select">
+            <option value="fire">Fire</option>
+          </select>
+          <p>Choose the battle scenario.</p>
+        </section>
+      </section>
+      <button type="button" id="fightbtn">Fight!</button>
+      <p class="error hidden">Error! Something went wrong with the game!</p>
+    </section>
+    <section>
+      <h2>🔥Fight!🔥</h2>
+      <section id="fightstage">
+        <img id="stagefighter" src="imgs/guyonfire.gif" alt="Guy on fire from Metal Slug">
+        <img id="stageenemy" src="imgs/guyonfire.gif" alt="Guy on fire from Metal Slug">
+      </section>
+      <button type="button" id="continuebtn">Continue!</button>
+    </section>
+  </main>
+  <footer>
+    <h3>Credits:</h3>
+    <ul>
+      <li>The Ryu gifs are from Street Fighter 3: 3rd Strike, uploaded to wiki.supercombo.gg.</li>
+      <li>The Dragonite sprite gif is from Pokemon Black and White, uploaded to pokemondb.net.</li>
+      <li>"Dragonite Pokemon GIF" is from tenor.com, uploaded by brunodp.</li>
+      <li>"Lizard PNG" is from PlusPNG.com.</li>
+      <li>
+        "Bearded Dragons Lizards GIF by Cheezburger" is from pinterest.com, uploaded by GIPHY.
+      </li>
+      <li>
+        "Large Fire At Wadamoya" from The Last Blade 2 gif from imgur.com, uploaded by RudeBootie.
+      </li>
+      <li>
+        "Soldier on Fire" from Metal Slug gif from GameBanana.com, uploaded by -Reaper-.
+      </li>
+      <li>Amiibo/Enemy images fetched from AmiiboAPI, at AmiiboAPI.com.</li>
+      <li>Zip code and hometown information fetched from zippopotamus, at zippopotam.us.</li>
+    </ul>
+  </footer>
+</body>
+</html>

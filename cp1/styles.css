@@ -1,0 +1,76 @@
+/*
+  This is the styles.css page for my Creative Project 1 assignment. It is used by
+  all pages in my assignment and makes the pages look nice.
+*/
+
+body {
+  background-color: royalblue;
+  font-family: "Times New Roman", serif;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+img {
+  height: 350px;
+}
+
+h1, h2, h3, article {
+  text-shadow: 4px 4px 5px purple;
+}
+
+h1, article {
+  color: yellow;
+}
+
+h1 > em {
+  text-decoration: underline;
+  background-image: url("songimgs/fire.gif");
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+h1 {
+  font-size: 30pt;
+}
+
+h2 {
+  font-size: 22pt;
+}
+
+h3 {
+  font-size: 20pt;
+}
+
+h2, h3 {
+  color: greenyellow;
+}
+
+body > section > h3, h1 {
+  text-align: center;
+}
+
+.chiefkeef {
+  font-family: "Ballet", cursive;
+}
+
+li > em, article {
+  font-size: 18pt;
+}
+
+li > img {
+  height: 30px;
+  width: 30px;
+}
+
+article {
+  border: 4px solid powderblue;
+  border-style: outset;
+  padding: 25px;
+  background-color: darkred;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+ul {
+  list-style-type: square;
+}

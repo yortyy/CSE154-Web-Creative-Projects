@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+  This is the index.html page for LeBron's Legacy. It serves as the web page for the "LeBron's
+  Legacy" game. This game allows users to play a simulation where they embody LeBron James and
+  attempt to make crucial shots on the court. The game presents users with options for a type of
+  LeBron (Heat, Cavaliers, or Lakers). Users can then click on the court to simulate shooting
+  a basketball. The game keeps track of game statistics such as points, field goals made, and
+  shooting percentages, showing the end results after 10 shots.
+-->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Spice&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeBron's Legacy - CP4</title>
+</head>
+<body>
+  <header>
+    <h1>
+      LeBron's Legacy 🏀
+    </h1>
+  </header>
+  <main>
+    <article>
+      <p>
+        In "LeBron's Legacy," the fate of humanity hangs in the balance as you step into the
+        role of basketball legend LeBron James. With the world on the brink of annihilation by
+        alien forces, every shot you take carries monumental significance. As you navigate through
+        ten crucial shots, the weight of LeBron's legacy and the survival of Earth converge in a
+        gripping test of skill and nerve. Feel the gravity of the moment as you realize that your
+        actions on the virtual court could determine the outcome of a global catastrophe. Can you
+        summon the focus, precision, and determination needed to secure victory and ensure that
+        LeBron's legacy endures as the hero who saved humanity from extinction?
+      </p>
+    </article>
+    <section>
+      <h2>Options</h2>
+      <section id="settings">
+        <section>
+          <p>Difficulty: </p>
+          <select name="difficulty" id="difficulty-select">
+            <option selected="selected" value="normal">Normal</option>
+          </select>
+          <p>LeBron Type: </p>
+          <select name="type" id="type-select">
+            <option value="heat">12' - 13' Heat</option>
+            <option selected="selected" value="cavs">15' - 16' Cavaliers</option>
+            <option value="lakers">23' - 24' Lakers</option>
+          </select>
+          <button type="button" id="ballbtn">Ball!</button>
+        </section>
+        <img id="options-lebron" src="imgs/lebron/cavs.png" alt="LeBron on the Cavs 2015 headshot">
+        <section id="attributes">
+          <p>3pt Shot: <span id="three"></span></p>
+          <p>16ft-3pt Shot: <span id="sixteenthree"></span></p>
+          <p>10ft-16ft Shot: <span id="tensixteen"></span></p>
+          <p>3ft-10ft Shot: <span id="threeten"></span></p>
+          <p>At the Rim: <span id="rim"></span></p>
+        </section>
+      </section>
+      <p id="error" class="hidden"></p>
+      <section class="hidden" id="court">
+        <img id="lebron" src="imgs/lebron/cavs.png" alt="LeBron on the Cavs 2015 headshot">
+        <p>Shoot your shot</p>
+      </section>
+      <section class="hidden" id="end-game">
+        <section>
+          <h3>Great shooting!</h3>
+        </section>
+        <section>
+          <h4>Today's stats:</h4>
+          <p>Pts: <span id="pts"></span></p>
+          <p>FGs: <span id="fgs"></span></p>
+          <p>FG%: <span id="fgp"></span></p>
+          <p>3PM: <span id="tpm"></span></p>
+          <p>3P%: <span id="tpp"></span></p>
+        </section>
+      </section>
+      <button class="hidden" type="button" id="shootbtn">Shoot!</button>
+    </section>
+  </main>
+  <footer>
+    <h3>Credits:</h3>
+    <ul>
+      <li>LeBron's Legacy has no association with the NBA or LeBron!!!</li>
+      <li>LeBron's Legacy paragraph written by ChatGPT.</li>
+      <li>Basketball court from psdgraphics.com.</li>
+      <li>All LeBron headshots from 2kratings.com.</li>
+      <li>Motion GIF from giphy.com.</li>
+      <li>Lebron'S Troll Face Lebron Lebronjames GIF from tenor.com.</li>
+      <li>Los Angeles Lakers Lebron James GIF from tenor.com, uploaded by masoncarr2244.</li>
+      <li>Celebration Cavs GIF from tenor.com, uploaded by Carter18.</li>
+      <li>Howard The Alien Alien GIF from tenor.com, uploaded by Coolguycoopie</li>
+    </ul>
+  </footer>
+</body>
+</html>

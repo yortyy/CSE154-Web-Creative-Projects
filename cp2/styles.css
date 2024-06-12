@@ -1,0 +1,95 @@
+body {
+  background-color: #4169e1;
+  font-family: "Rubik", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+header {
+  font-family: "Bungee", sans-serif;
+}
+
+header, button + p {
+  color: #F5F749;
+}
+
+h2 {
+  color: #F5F749;
+}
+
+header, h2, button + p, #makefighter > section, footer > h3 {
+  text-align: center;
+}
+
+article {
+  margin: auto;
+  width: 40%;
+}
+
+#makefighter, main > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#makefighter > section {
+  font-size: 20px;
+  background-color: #F6F5AE;
+  border: 10px solid #F6F5AE;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+  width: 200px;
+}
+
+#makefighter > section > select {
+  width: 150px;
+}
+
+#makefighterbtn {
+  width: 40%;
+}
+
+main > section {
+  flex-direction: column;
+}
+
+button + p {
+  font-family: "Bungee", sans-serif;
+}
+
+button + p > strong {
+  color: #F24236;
+}
+
+footer {
+  margin-top: 150px;
+}
+
+img {
+  height: 200px;
+  margin: 20px;
+}
+
+.small {
+  height: 100px;
+}
+
+.big {
+  height: 400px;
+}
+
+.red {
+  filter: saturate(1000%);
+}
+
+.blue {
+  filter: saturate(150%) brightness(106%) invert(100%);
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="mylineups.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mylineups.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>BALLER//BROWSER</title>
+</head>
+<body>
+
+  <header>
+    <h1><a href="home.html">[<strong>BALLER//BROWSER</strong>]</a></h1>
+    <h2 class="navbar-title"><a href="index.html">Players</a></h2>
+    <h2 class="navbar-title"><a href="mylineups.html">MyLineups</a></h2>
+    <div class="dropdown navbar-title">
+      <button id="login-dropbtn" class="dropbtn">MyAccount
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <form id="login-form">
+          <label for="fname">Username </label>
+          <input type="text" id="inputlogin-username" name="username"><br>
+          <label for="lname">Password </label>
+          <input type="text" id="lname" name="password"><br>
+          <button type="submit">Submit</button>
+        </form>
+        <p id="login-status">Enter Username and Password</p>
+        <p>New to BALLER//BROWSER?</p>
+        <button id="create-acc-btn">Create an account</button>
+      </div>
+    </div>
+    <!-- <h2 class="navbar-title">What's good, Kyle</h2> -->
+  </header>
+
+  <main>
+    <dialog id="order-history-popup">
+      <button type="button">X</button>
+      <section>
+        <h1>Order History</h1>
+        <p id="order-history-text"></p>
+        <p>Confirmation Number / Purchased Players</p>
+        <section id="order-history-list">
+        </section>
+      </section>
+    </dialog>
+    <dialog id="create-acc-popup">
+      <button type="button">X</button>
+      <section>
+        <h1>Create a new account</h1>
+        <p>We'd love to have you join the BALLER//BROWSER community!</p>
+        <p>Just enter the information below: </p>
+        <section>
+          <form id="create-acc-form">
+            <label for="fname">Username </label>
+            <input type="text" id="fname" name="username">
+            <label for="lname">Password </label>
+            <input type="text" id="lname" name="password">
+            <label for="ename">Email </label>
+            <input type="text" id="ename" name="email">
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+        <p id="create-acc-text"></p>
+      </section>
+    </dialog>
+    <dialog id="info-popup">
+      <button type="button">X</button>
+    </dialog>
+    <section id="top-lineup-section">
+      <button id="order-history-btn">See order history</button>
+      <p>Choose your lineup: </p>
+      <select name="team" id="lineup-select">
+        <option value="1">Lineup 1</option>
+        <option value="2">Lineup 2</option>
+        <option value="3">Lineup 3</option>
+      </select>
+      <p>Auto generate best lineup: </p>
+      <input type="checkbox" checked name="best-lineup">
+      <button id="delete-lineup-btn">Delete current lineup</button>
+    </section>
+    <section id="lineup-showcase">
+      <p></p>
+      <h1 class="hidden">STARTERS</h1>
+      <section id="starters">
+      </section>
+      <h1 class="hidden">BENCH</h1>
+      <section id="bench">
+      </section>
+    </section>
+  </main>
+  <footer>
+    <ul>
+      <li>
+        <a target="_blank" href="https://icons8.com/icon/84926/shopping-cart">Shopping Cart</a>
+        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://icons8.com/icon/82875/search">Search</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </li>
+      <li><a href="https://www.pngall.com/goat-png/download/11276" target="_blank">Goat</a>
+        image from pngall.com
+      </li>
+      <li>NBA statistics, player headshots and logos, retrieved from NBA.com.</li>
+      <li>We are in no affiliation with the NBA.</li>
+    </ul>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/*
+  This is the styles.css page for BlazBattle. It sets how the website looks. There are also
+  settings that change a class, aimed to be dynamically added or removed to the node. The website
+  is designed to look somewhat modern and fun. It uses mutltiple flex displays for a clean look.
+*/
+
+body {
+  background-color: #4169e1;
+  font-family: "Rubik", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  font-family: "Bungee", sans-serif;
+}
+
+header, button + p {
+  color: #F5F749;
+}
+
+h2 {
+  color: #F5F749;
+}
+
+header, h2, button + p, .settings > section, footer > h3 {
+  text-align: center;
+}
+
+article {
+  margin: auto;
+  width: 40%;
+}
+
+.settings, main > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.settings > section {
+  font-size: 20px;
+  background-color: #F6F5AE;
+  border: 10px solid #F6F5AE;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+  width: 200px;
+}
+
+.settings > section > select {
+  width: 150px;
+}
+
+.error {
+  margin: 0px;
+  font-size: 14px;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+#setupfight > section {
+  height: 200px;
+}
+
+input + p, select + p {
+  font-size: 14px;
+}
+
+#storyText {
+  font-size: 25px;
+  color: white;
+  margin: 20px;
+}
+
+main > section {
+  flex-direction: column;
+}
+
+.settings {
+  flex-direction: row;
+}
+
+button + p, button {
+  font-family: "Bungee", sans-serif;
+}
+
+button + p > strong {
+  color: #F24236;
+}
+
+button {
+  font-size: 10px;
+}
+
+footer {
+  margin-top: 150px;
+}
+
+.firebg {
+  background: url("imgs/stages/fire.gif") center;
+  background-size: cover;
+}
+
+.flexattack {
+  margin-left: auto;
+}
+
+#fightstage {
+  border: #F24236 10px solid;
+  background-color: black;
+  margin-bottom: 20px;
+  padding: 5px;
+  width: 90%;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#fightstage > p {
+  align-self: center;
+  margin: 50px;
+}
+
+img {
+  height: 200px;
+  margin: 20px;
+}
+
+.small {
+  height: 100px;
+}
+
+.big {
+  height: 400px;
+}
+
+.red {
+  filter: saturate(1000%);
+}
+
+.blue {
+  filter: saturate(150%) brightness(106%) invert(100%);
+}

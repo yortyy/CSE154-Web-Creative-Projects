@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>BALLER//BROWSER</title>
+</head>
+<body>
+  <header>
+    <h1><a href="home.html">[<strong>BALLER//BROWSER</strong>]</a></h1>
+    <h2 class="navbar-title"><a href="index.html">Players</a></h2>
+    <h2 class="navbar-title"><a href="mylineups.html">MyLineups</a></h2>
+    <div class="dropdown navbar-title">
+      <button id="login-dropbtn" class="dropbtn">MyAccount
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <form id="login-form">
+          <label for="fname">Username </label>
+          <input type="text" id="inputlogin-username" name="username"><br>
+          <label for="lname">Password </label>
+          <input type="text" id="inputlogin-password" name="password"><br>
+          <input type="submit" value="Submit">
+        </form>
+        <p id="login-status">Enter Username and Password</p>
+        <!-- <button type="button" id="logout-btn">Logout</button> -->
+        <p>New to BALLER//BROWSER?</p>
+        <button id="create-acc-btn">Create an account</button>
+      </div>
+    </div>
+    <!-- <h2 class="navbar-title">What's good, Kyle</h2> -->
+    <img id="cart-img" src="imgs/cart-empty.png" alt="A shopping cart filled in with grey.">
+  </header>
+  <main>
+    <dialog id="create-acc-popup">
+      <button type="button">X</button>
+      <section>
+        <h1>Create a new account</h1>
+        <p>We'd love to have you join the BALLER//BROWSER community!</p>
+        <p>Just enter the information below: </p>
+        <section>
+          <form id="create-acc-form">
+            <label for="fname">Username </label>
+            <input type="text" id="fname" name="username">
+            <label for="lname">Password </label>
+            <input type="text" id="lname" name="password">
+            <label for="ename">Email </label>
+            <input type="text" id="ename" name="email">
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+        <p id="create-acc-text"></p>
+      </section>
+    </dialog>
+    <dialog id="confirm-purchase-popup">
+      <button type="button">X</button>
+      <section>
+        <h1>Confirm your lineup</h1>
+        <p>Just to confirm, you want the following players in a lineup: </p>
+        <section id="confirm-purchase-players">
+        </section>
+        <p>Your total price for this purchase is: </p>
+        <p id="confirm-purchase-price"></p>
+        <button id="confirm-purchase-btn">Confirm</button>
+        <p id="confirm-purchase-text"></p>
+      </section>
+    </dialog>
+    <section id="search-and-filter">
+      <details>
+        <summary>Filter and Sort</summary>
+        <section>
+          <section id="sort-section">
+            <section>
+              <p>View Mode </p>
+              <select name="team" id="view-mode">
+                <option value="showcase">Card Showcase</option>
+                <option value="list" selected="selected">List View</option>
+              </select>
+            </section>
+            <section>
+              <p>Sort By: </p>
+              <select name="team" id="sort-by">
+                <option value="team_code">Team Name</option>
+                <option value="player">Player Name</option>
+                <option value="price">Price</option>
+                <option value="pos">Position</option>
+                <option value="pts">Points Per Game</option>
+                <option value="trb">Rebounds Per Game</option>
+                <option value="ast">Assists Per Game</option>
+              </select>
+            </section>
+            <section>
+              <p>Sort Order: </p>
+              <select name="team" id="sort-order">
+                <option value="ASC">Ascend</option>
+                <option value="DESC">Descend</option>
+              </select>
+            </section>
+          </section>
+          <section id="filter-section">
+            <section>
+              <p>Price</p>
+              <section class="price-filter">
+                <input type="number" class="min" min="0" max="7000" placeholder="$Min" step="100">
+                <span> to </span>
+                <input type="number" class="max" min="0" max="7000" placeholder="$Max" step="100">
+              </section>
+            </section>
+
+            <section>
+              <p>Position</p>
+              <section class="pos-filter">
+                <input type="checkbox" checked name="PG">
+                <input type="checkbox" checked name="SG">
+                <input type="checkbox" checked name="SF">
+                <input type="checkbox" checked name="PF">
+                <input type="checkbox" checked name="C">
+                <span>PG </span>
+                <span>SG </span>
+                <span>SF </span>
+                <span>PF </span>
+                <span>C </span>
+              </section>
+            </section>
+
+            <section>
+              <p>Team</p>
+              <select name="team" id="team-filter">
+                <option value>All Teams</option>
+                <option value="ATL">Atlanta Hawks</option>
+                <option value="BOS">Boston Celtics</option>
+                <option value="BKN">Brooklyn Nets</option>
+                <option value="CHA">Charlotte Hornets</option>
+                <option value="CHI">Chicago Bulls</option>
+                <option value="CLE">Cleveland Cavaliers</option>
+                <option value="DAL">Dallas Mavericks</option>
+                <option value="DEN">Denver Nuggets</option>
+                <option value="DET">Detroit Pistons</option>
+                <option value="GSW">Golden State Warriors</option>
+                <option value="HOU">Houston Rockets</option>
+                <option value="IND">Indiana Pacers</option>
+                <option value="LAC">LA Clippers</option>
+                <option value="LAL">Los Angeles Lakers</option>
+                <option value="MEM">Memphis Grizzlies</option>
+                <option value="MIA">Miami Heat</option>
+                <option value="MIL">Milwaukee Bucks</option>
+                <option value="MIN">Minnesota Timberwolves</option>
+                <option value="NOP">New Orleans Pelicans</option>
+                <option value="NYK">New York Knicks</option>
+                <option value="OKC">Oklahoma City Thunder</option>
+                <option value="ORL">Orlando Magic</option>
+                <option value="PHI">Philadelphia 76ers</option>
+                <option value="PHX">Phoenix Suns</option>
+                <option value="POR" selected="selected">Portland Trail Blazers</option>
+                <option value="SAC">Sacramento Kings</option>
+                <option value="SAS">San Antonio Spurs</option>
+                <option value="TOR">Toronto Raptors</option>
+                <option value="UTA">Utah Jazz</option>
+              </select>
+            </section>
+            <section>
+              <p>Points Per Game</p>
+              <section class="pts-filter">
+                <input type="number" class="min" min="0" max="35" placeholder="Min" step="5">
+                <span> to </span>
+                <input type="number" class="max" min="0" max="35" placeholder="Max" step="5">
+              </section>
+            </section>
+
+            <section>
+              <p>Rebounds Per Game</p>
+              <section class="trb-filter">
+                <input type="number" class="min" min="0" max="14" placeholder="Min" step="1">
+                <span> to </span>
+                <input type="number" class="max" min="0" max="14" placeholder="Max" step="1">
+              </section>
+            </section>
+
+            <section>
+              <p>Assists Per Game</p>
+              <section class="ast-filter">
+                <input type="number" class="min" min="0" max="11" placeholder="Min" step="1">
+                <span> to </span>
+                <input type="number" class="max" min="0" max="11" placeholder="Max" step="1">
+              </section>
+            </section>
+
+          </section>
+        </section>
+      </details>
+      <form>
+        <button type="submit">
+          <img src="imgs/search.png" alt="magnifying glass for search button">
+        </button>
+        <input type="search" name="search" placeholder="LeBron James">
+      </form>
+    </section>
+    <section id="card-showcase">
+    </section>
+    <dialog id="info-popup">
+      <button type="button">X</button>
+    </dialog>
+    <section id="right-sidebar">
+      <p id="cart-price">Price: <br><span>0</span></p>
+      <p id="cartpurchase-status">Login.</p>
+      <button id="cartpurchase-btn">Checkout</button>
+      <p>Your Lineup</p>
+    </section>
+  </main>
+  <footer>
+    <ul>
+      <li>
+        <a target="_blank" href="https://icons8.com/icon/84926/shopping-cart">Shopping Cart</a>
+        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://icons8.com/icon/82875/search">Search</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </li>
+      <li><a href="https://www.pngall.com/goat-png/download/11276" target="_blank">Goat</a>
+        image from pngall.com
+      </li>
+      <li>NBA statistics, player headshots and logos, retrieved from NBA.com.</li>
+      <li>We are in no affiliation with the NBA.</li>
+    </ul>
+  </footer>
+</body>
+</html>
