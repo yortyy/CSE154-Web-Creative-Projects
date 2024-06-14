@@ -25,9 +25,9 @@ body > section > .header {
   justify-content: center;
   align-items: center;
   display: grid;
-  grid-template-columns: minmax(115px, 140px) minmax(100px, 1fr) minmax(70px, 200px);
+  grid-template-columns: minmax(0px, 140px) minmax(140px, 1fr) minmax(20px, 200px);
   grid-template-rows: 80px;
-  column-gap: 10px;
+  column-gap: 15px;
 }
 
 body > section:hover {
@@ -36,14 +36,19 @@ body > section:hover {
 }
 
 .header > div {
+  height: 60px;
+  width: 60px;
   margin: auto;
 }
 
 .header > div > img {
-  margin-top: 10px;
   height: 60px;
-  border: #020122 1px solid;
-  background-color: #020122;
+  width: 60px;
+  border: #020122 2px solid;
+  object-fit: cover;
+  object-position: top;
+  background: url("imgs/logos/giphy.gif") center;
+  background-size: cover;
 }
 
 section > .about {
@@ -73,15 +78,15 @@ section:hover > .about {
 
 .about > section > p {
   margin-right: 20px;
-  width: 40%;
+  width: clamp(300px, 40%, 40%);
 }
 
 .about > section > div {
-  width: 50%;
+  width: clamp(300px, 50%, 50%);
 }
 
 .about > h3{
-  margin-top: 0px;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
