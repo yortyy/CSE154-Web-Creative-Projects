@@ -6,10 +6,35 @@ body {
   font-family: "Assistant", sans-serif;
   color: #020122;
   background-color: #F2F3AE;
+  background-image: url(imgs/backgrounds/4.gif);
+  background-position: left;
+  background-size: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+}
+
+body > h1 {
+  align-self: center;
+  background-color: #F2F3AE;
+  padding: 5px;
+  border: #020122 1px solid;
+  margin-bottom: 3px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#bgchange {
+  margin-top: 3px;
+  margin-bottom: 5px;
+  border: #020122 1px solid;
 }
 
 body > section {
