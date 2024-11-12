@@ -11,7 +11,6 @@
   let pastBackground = 0;
   let past2Background = 0;
   let past3Background = 0;
-  let past4Background = 0;
 
   window.addEventListener("load", init);
 
@@ -22,10 +21,9 @@
   function changeBG() {
     let rand = Math.ceil(Math.random() * NUMBER_OF_BACKGROUNDS);
     while(rand == currentBackground || rand == pastBackground || rand == past2Background ||
-          rand == past3Background || rand == past4Background) {
+          rand == past3Background) {
       rand = Math.ceil(Math.random() * NUMBER_OF_BACKGROUNDS);
     }
-    past4Background = past3Background;
     past3Background = past2Background;
     past2Background = pastBackground;
     pastBackground = currentBackground;
