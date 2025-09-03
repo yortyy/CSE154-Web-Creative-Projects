@@ -307,10 +307,16 @@
       id("card-showcase").classList.add("list-view");
     }
 
+    const loadingMsg = document.createElement("p");
+    loadingMsg.textContent = "Loading...";
+    loadingMsg.id = "loading-msg"; // optional: for styling or reference
+    id("card-showcase").appendChild(loadingMsg);
+
     let filtersQueryString = encodeURIComponent(JSON.stringify(filters));
     let player = await fetch(API_URL + "/search/" + sort[1] + "?filters=" + filtersQueryString + "&sortBy=" + sort[0]);
     await statusCheck(player);
     player = await player.json();
+    loadingMsg.remove();
     for(let i = 0; i < player.length; i++) {
       let newCard;
       if(viewMode === "showcase") {

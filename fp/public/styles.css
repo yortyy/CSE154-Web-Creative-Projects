@@ -771,3 +771,10 @@ header > img {
 .TorontoRaptors2 { color: white; }
 .UtahJazz2 { color: #F9A01B; }
 .WashingtonWizards2 { color: #E31837; }
+
+#loading-msg {
+  font-weight: bold;
+  color: #fa0000;
+  text-align: center;
+  padding: 20px;
+}
