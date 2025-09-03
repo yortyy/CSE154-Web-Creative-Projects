@@ -6,7 +6,7 @@
 "use strict";
 
 (function() {
-  const NUMBER_OF_BACKGROUNDS = 17;
+  const NUMBER_OF_BACKGROUNDS = 8;
   let currentBackground = 4;
   let pastBackground = 0;
   let past2Background = 0;
